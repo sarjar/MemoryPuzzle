@@ -1,0 +1,55 @@
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  background: rgb(224, 224, 224);
+}
+
+.game-container {
+  width: 640px;
+  height: 640px;
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  perspective: 1000px;
+}
+
+.card {
+  width: 150px;
+  margin: 5px;
+  transform: scale(1);
+  transform-style: preserve-3d;
+  transition: 0.5s;
+}
+
+.card:active {
+  transform: scale(0.97);
+  transition: 0.2s;
+}
+
+.card.selected {
+  transform: rotateY(180deg);
+}
+
+.front,
+.back {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  border-radius: 5px;
+  background: #1c7ccc;
+  backface-visibility: hidden;
+}
+
+.front {
+  transform: rotateY(180deg);
+}
+
+.matched .back {
+  background: rgb(224, 224, 224) !important;
+}
