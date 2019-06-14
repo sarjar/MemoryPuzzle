@@ -1,4 +1,5 @@
 * {
+  padding: 0;
   margin: 0;
   box-sizing: border-box;
 }
@@ -51,5 +52,5 @@ body {
 }
 
 .matched .back {
-  background: rgb(224, 224, 224) !important;
+  background: rgb(224, 224, 224);
 }
